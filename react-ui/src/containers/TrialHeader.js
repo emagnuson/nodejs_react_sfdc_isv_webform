@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../ExponentPartners_ExponentCaseManagement_mobile_2.png';
+import logo from '../logosalesforce.svg';
 import '../App.css';
 
 
