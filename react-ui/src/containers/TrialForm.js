@@ -28,14 +28,17 @@ class TrialForm extends React.Component {
 	  lastName: {value:'', message:''},
 	  email: {value:'', message:''},
 	  company: {value:'', message:''},
-	  phone: {value:'', message:''},
+	  //phone: {value:'', message:''},
+          subdomain: {value:'', message:''},
 	  uname: {value:'', message:''},
 	  countryCode: '',
 	  prefValue: '',
-	  phoneValue: '',
+	  //phoneValue: '',
+	  subdomainValue: '',
 	  langCode: '',
 	  countryCodeError: '',
-	  phoneValueError: '',
+	  //phoneValueError: '',
+	  subdomainValueError: '',  
 	  prefValueError: '',
 	  langCodeError: '',
 
@@ -78,7 +81,7 @@ class TrialForm extends React.Component {
     		val = false;
     	}
     	//validation checks on the comboboxes (checks to see if any are empty)
-    	if (key === 'phoneValue' || key === 'prefValue' || key === 'countryCode' || key === 'langCode'){
+    	if (key === 'subdomainValue' || key === 'prefValue' || key === 'countryCode' || key === 'langCode'){
     		if (state[key] === '') {
     			var m = key+'Error';
     			state[m] = 'This is a required field.';
@@ -98,11 +101,13 @@ class TrialForm extends React.Component {
     							this.state.lastName.value, 
     						    this.state.email.value, 
     							this.state.company.value, 
-    							this.state.phone.value, 
+    							//this.state.phone.value, 
+    							this.state.subdomain.value, 
     							this.state.uname.value, 
     							this.state.countryCode, 
     							this.state.prefValue, 
-    							this.state.phoneValue,
+    							//this.state.phoneValue,
+							this.state.subdomainValue,
     							this.state.langCode);
 
     	if (!myTrial){
@@ -121,7 +126,7 @@ class TrialForm extends React.Component {
   //renders the elements on the screen
   render() {
   	
-  	var {firstName, lastName, email, company, phone, uname} = this.state;
+  	var {firstName, lastName, email, company, subdomain, uname} = this.state;
 
     return (
 		<div>
@@ -143,6 +148,18 @@ class TrialForm extends React.Component {
 	                            onChange={this.handleInputChange}
 	                          />
 	                        </div>
+	    			<div className="slds-form-element slds-m-bottom--large">
+	                          <Input
+	                            id="lastName"
+	                            label="Last Name"
+	                            required
+	                            name="lastName"
+	                            type="text"
+	                            errorText={lastName.message}
+	                            value={lastName.value}
+	                            onChange={this.handleInputChange}
+	                          />
+	                        </div>
 	                        <div className="slds-form-element slds-m-bottom--large">
 	                          <Input
 	                            id="email"
@@ -155,18 +172,18 @@ class TrialForm extends React.Component {
 	                            onChange={this.handleInputChange}
 	                          />
 	                        </div>
-	                        <div className="slds-form-element slds-m-bottom--large">
-	                          <Input
-	                            id="phone"
-	                            label="Phone"
-	                            required
-	                            name="phone"
-	                            errorText={phone.message}
-	                            value={phone.value}
-	                            type="tel"
-	                            onChange={this.handleInputChange}
-	                          />
-	                        </div>
+	                        //<div className="slds-form-element slds-m-bottom--large">
+	                          //<Input
+	                            //id="phone"
+	                            //label="Phone"
+	                            //required
+	                            //name="phone"
+	                            //errorText={phone.message}
+	                            //value={phone.value}
+	                            //type="tel"
+	                            //onChange={this.handleInputChange}
+	                          ///>
+	                        //</div>
 	                        <div className="slds-form-element slds-m-bottom--large">
 	                          <Input
 	                            id="company"
@@ -196,16 +213,16 @@ class TrialForm extends React.Component {
 	                      <div className="slds-col">
 	                        <div className="slds-form-element slds-m-bottom--large">
 	                          <Input
-	                            id="lastName"
-	                            label="Last Name"
+	                            id="subdomain"
+	                            label="Subdomain"
 	                            required
-	                            name="lastName"
-	                            type="text"
-	                            errorText={lastName.message}
-	                            value={lastName.value}
+	                            name="subdomain"
+	                            errorText={subdomain.message}
+	                            value={subdomain.value}
+	                            type="tel"
 	                            onChange={this.handleInputChange}
 	                          />
-	                        </div>
+	    			</div>
 	                        <div className="slds-form-element slds-m-bottom--large">
 	                          <Combobox
 	                            id="contactPrefs"
