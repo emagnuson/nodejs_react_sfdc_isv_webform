@@ -18,7 +18,7 @@ class TrialHeader extends React.Component {
 	            </header>
 	            <p className="App-intro">
 	              	    <span>
-	                      The Exponent Case Management trial is for 30 days. 	 
+	                      The Exponent Case Management demo trial is for 30 days and is only available to ECM partners and pre-authorized individuals. 	 
 	                      By signing up for a trial, you agree to the {' '}<a href="https://www.exponentpartners.com/exponent-partners-terms/">Master License Subscription</a> and agree to share my details with Exponent Partners.
 	                    </span>
 	            </p>
