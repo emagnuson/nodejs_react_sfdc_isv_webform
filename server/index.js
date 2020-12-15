@@ -102,7 +102,7 @@ if (cluster.isMaster) {
             //trial.set('ContactPreference', req.body.prefValue);
             //trial.set('PhonePreference', req.body.phoneValue);
             trial.set('TemplateId', templateId);
-            trial.set('ShouldConnectToEnvHub', envhub);
+            trial.set('ShouldConnectToEnvHub', 'TRUE');
 
             trial.set('PreferredLanguage', req.body.langCode);
 
