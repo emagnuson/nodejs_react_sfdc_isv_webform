@@ -12,7 +12,6 @@ const password = process.env.SALESFORCE_PASSWORD;
 const securityToken = process.env.SALESFORCE_SECURITY_TOKEN;
 const PORT = process.env.PORT || 5000;
 const templateId = process.env.TRIALFORCE_TEMPLATE_ID;
-const envhub = process.env.CONNECT_ENVHUB || TRUE;
 
 if (!securityToken) { missing("SALESFORCE_SECURITY_TOKEN"); }
 if (!username) { missing("SALESFORCE_USERNAME"); }
